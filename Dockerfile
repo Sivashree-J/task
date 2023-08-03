@@ -9,5 +9,5 @@ WORKDIR /app
 
 COPY --from=build /app/published-app /app
 ENV ASPNETCORE_ENVIRONMENT=container
-
+EXPOSE 80
 ENTRYPOINT [ "dotnet", "/app/api.dll" ]
